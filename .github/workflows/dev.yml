@@ -1,8 +1,9 @@
-name: tests on push
+name: Run Unit Tests
 run-name: ${{ github.actor }} initiate pull-request
 on: [push]
 jobs:
-  Execute-Tests:
+  execute-tests:
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -11,4 +12,4 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
       - name: Build with Gradle
-        run: ./gradlew test
+        run: ./gradlew --no-daemon test
