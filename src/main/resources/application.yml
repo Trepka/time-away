@@ -2,9 +2,9 @@ spring:
   application:
     name: time-away
   datasource:
-    url: jdbc:postgresql://localhost:5432/your_database_name
-    username: your_username
-    password: your_password
+    url: jdbc:postgresql://localhost:5432/time_away_db
+    username: postgres
+    password: postgres
   jpa:
     database: POSTGRESQL
     show-sql: true
